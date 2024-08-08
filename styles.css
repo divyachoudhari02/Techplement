@@ -1,0 +1,296 @@
+/* General styles for the body */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+/* Style for the header */
+header {
+    background: linear-gradient(90deg, #0066cc, #003366);
+    color: #fff;
+    padding: 10px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8em;
+    font-weight: 700;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin-left: 20px;
+    position: relative;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+header nav ul li a:hover {
+    color: #ffcc00;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Dropdown menu styles */
+header nav ul li:hover ul {
+    display: block;
+}
+
+header nav ul ul {
+    display: none;
+    position: absolute;
+    background-color: #0055a5;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    top: 40px;
+    left: 0;
+    z-index: 1000;
+    min-width: 150px;
+}
+
+header nav ul ul li {
+    margin: 0;
+}
+
+header nav ul ul li a {
+    padding: 10px 15px;
+    white-space: nowrap;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+
+header nav ul ul li a:hover {
+    background-color: #ffcc00;
+    color: #0055a5;
+}
+
+/* Mobile navigation styles */
+header .menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+header .menu-toggle span {
+    background: #fff;
+    height: 3px;
+    width: 25px;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+/* Show menu toggle button on mobile */
+@media (max-width: 768px) {
+    header .menu-toggle {
+        display: flex;
+    }
+
+    header nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: linear-gradient(90deg, #0066cc, #003366);
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    header nav ul ul {
+        position: static;
+        box-shadow: none;
+        background-color: transparent;
+    }
+
+    header nav ul ul li a {
+        padding: 10px 20px;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    header nav ul ul li a:hover {
+        background-color: #ffcc00;
+        color: #0055a5;
+    }
+
+    .nav-active {
+        display: flex !important;
+    }
+}
+
+/* Hero section styles */
+.hero {
+    background: url('img.png') no-repeat center center;
+    background-size: cover;
+    position: relative;
+    padding: 100px 20px;
+    text-align: center;
+    color: white;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.hero .cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #ffcc00;
+    color: #003366;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.hero .cta-button:hover {
+    background-color: #e6b800;
+}
+
+/* Courses section styles */
+.courses {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+}
+
+.courses .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.courses h2 {
+    font-size: 2.2em;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+.course-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.course {
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    flex-basis: calc(33.333% - 40px);
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.course:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.course h3 {
+    margin-top: 0;
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+.course p {
+    margin: 15px 0;
+    font-size: 1em;
+    color: #666;
+}
+
+.course .cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2196f3;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.course .cta-button:hover {
+    background-color: #1e87d4;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive styles */
+@media (max-width: 900px) {
+    .course {
+        flex-basis: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 600px) {
+    .course {
+        flex-basis: calc(100% - 20px);
+    }
+}
+
+

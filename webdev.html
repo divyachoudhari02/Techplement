@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development Course</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .image-container {
+            position: relative;
+            width: 100%;
+            height: 400px; /* Adjust the height as needed */
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: filter 0.5s;
+        }
+        .image-container img:hover {
+            filter: hue-rotate(180deg);
+        }
+        .course-info {
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            margin: 0 20px;
+        }
+        .course-info h2 {
+            font-size: 2em;
+            color: #003366;
+            margin-bottom: 20px;
+        }
+        .course-info p {
+            line-height: 1.6;
+            color: #333;
+        }
+        .course-info ul {
+            list-style: disc;
+            margin-left: 20px;
+        }
+        .course-info ul li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Web Development Course</h1>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="courses.html">Courses</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="signup.html">Sign Up</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="image-container">
+        <img src="web.jpeg" alt="Web Development Image">
+    </div>
+
+    <div class="course-info">
+        <h2>Web Development Course Information</h2>
+        <p>When creating a web development course based on HTML, CSS, and JavaScript, it's important to cover the fundamental concepts and practical skills that are essential for aspiring web developers. Here are some basic topics to include in the course:</p>
+        <ul>
+            <li><strong>Introduction to Web Development:</strong> Provide an overview of web development and its significance in the digital world. Explain the roles of HTML, CSS, and JavaScript in creating dynamic and interactive web applications.</li>
+            <li><strong>HTML Fundamentals:</strong> Cover the basics of HTML, including the structure of HTML documents, the use of tags, and the creation of semantic and accessible web content. Emphasize the importance of proper document structure and the role of HTML in defining the content of web pages.</li>
+            <li><strong>CSS Styling:</strong> Introduce the principles of CSS for styling web pages, including selectors, properties, and values. Discuss the application of CSS for layout design, color schemes, typography, and responsive web design.</li>
+            <li><strong>JavaScript Essentials:</strong> Explore the fundamentals of JavaScript, including variables, data types, functions, and control structures. Highlight the role of JavaScript in adding interactivity, handling user input, and manipulating the Document Object Model (DOM).</li>
+            <li><strong>Hands-On Projects:</strong> Encourage learners to practice their skills through hands-on projects, such as creating basic web pages, implementing styling and layout techniques, and adding interactive features using JavaScript.</li>
+            <li><strong>Best Practices and Industry Standards:</strong> Discuss best practices for writing clean and maintainable code, adhering to web standards, and optimizing web performance. Emphasize the importance of accessibility and cross-browser compatibility.</li>
+            <li><strong>Real-World Applications:</strong> Showcase real-world examples of websites and web applications that demonstrate the effective use of HTML, CSS, and JavaScript. Illustrate how these technologies are used to create engaging user experiences.</li>
+        </ul>
+        <p>If you have any more questions or need further assistance, feel free to ask!</p>
+        <p>You may also want to explore:</p>
+        <ul>
+            <li>Explain the importance of responsive design.</li>
+            <li>How can I improve user experience online?</li>
+            <li>Can you suggest modern web design trends?</li>
+        </ul>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Online Course Selling Website. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

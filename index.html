@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Course Selling Website</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Learn Online</h1>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#our-courses">Courses</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="webdev.html">Web Development</a></li>
+                            <li><a href="datasci.html">Data Science</a></li>
+                            <li><a href="uiux.html">UI/UX Design</a></li>
+                            <!-- Add more dropdown items here -->
+                        </ul>
+                    </li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="signup.html">SignUp</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2>Expand Your Knowledge</h2>
+            <p>Join our online courses and start learning today!</p>
+            <a href="#our-courses" class="cta-button">Browse Courses</a>
+        </div>
+    </section>
+
+    <section class="courses" id="our-courses">
+        <div class="container">
+            <h2>Our Courses</h2>
+            <div class="course-list">
+                <div class="course">
+                    <h3>Web Development</h3>
+                    <p>Learn the basics of HTML, CSS, and JavaScript.</p>
+                    <button onclick="location.href='webdev.html'" class="cta-button">Enroll Now</button>
+                </div>
+                <div class="course">
+                    <h3>Data Science</h3>
+                    <p>Explore data analysis, visualization, and machine learning.</p>
+                    <button onclick="location.href='datasci.html'" class="cta-button">Enroll Now</button>
+                </div>
+                <div class="course">
+                    <h3>UI/UX Design</h3>
+                    <p>Design user-friendly interfaces and improve user experience.</p>
+                    <button onclick="location.href='uiux.html'" class="cta-button">Enroll Now</button>
+                </div>
+                <div class="course">
+                    <h3>DevOps</h3>
+                    <p>Master the tools and processes for efficient development.</p>
+                    <button onclick="location.href='#'" class="cta-button">Enroll Now</button>
+                </div>
+                <div class="course">
+                    <h3>Cybersecurity</h3>
+                    <p>Understand the fundamentals of securing networks and systems.</p>
+                    <button onclick="location.href='#'" class="cta-button">Enroll Now</button>
+                </div>
+                <div class="course">
+                    <h3>Cloud Computing</h3>
+                    <p>Learn about cloud infrastructure and services.</p>
+                    <button onclick="location.href='#'" class="cta-button">Enroll Now</button>
+                </div>
+                <div class="course">
+                    <h3>Artificial Intelligence</h3>
+                    <p>Dive into AI concepts and applications.</p>
+                    <button onclick="location.href='#'" class="cta-button">Enroll Now</button>
+                </div>
+                <div class="course">
+                    <h3>Project Management</h3>
+                    <p>Understand the principles of effective project management.</p>
+                    <button onclick="location.href='#'" class="cta-button">Enroll Now</button>
+                </div>
+                <div class="course">
+                    <h3>Business Analysis</h3>
+                    <p>Gain skills in analyzing business processes and strategies.</p>
+                    <button onclick="location.href='#'" class="cta-button">Enroll Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Online Course Selling Website. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('nav').classList.toggle('nav-active');
+        });
+    
+        document.querySelectorAll('.dropdown').forEach(function(dropdown) {
+            dropdown.addEventListener('click', function() {
+                this.classList.toggle('dropdown-active');
+            });
+        });
+    </script>
+</body>
+</html>

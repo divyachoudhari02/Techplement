@@ -1,0 +1,227 @@
+/* General styles for the body */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+/* Style for the header */
+header {
+    background: linear-gradient(90deg, #0066cc, #003366);
+    color: #fff;
+    padding: 10px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8em;
+    font-weight: 700;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin-left: 20px;
+    position: relative;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+header nav ul li a:hover {
+    color: #ffcc00;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Dropdown menu styles */
+header nav ul li:hover ul {
+    display: block;
+}
+
+header nav ul ul {
+    display: none;
+    position: absolute;
+    background-color: #0055a5;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    top: 40px;
+    left: 0;
+    z-index: 1000;
+    min-width: 150px;
+}
+
+header nav ul ul li {
+    margin: 0;
+}
+
+header nav ul ul li a {
+    padding: 10px 15px;
+    white-space: nowrap;
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+
+header nav ul ul li a:hover {
+    background-color: #ffcc00;
+    color: #0055a5;
+}
+
+/* Mobile navigation styles */
+header .menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+header .menu-toggle span {
+    background: #fff;
+    height: 3px;
+    width: 25px;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+/* Show menu toggle button on mobile */
+@media (max-width: 768px) {
+    header .menu-toggle {
+        display: flex;
+    }
+
+    header nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: linear-gradient(90deg, #0066cc, #003366);
+    }
+
+    header nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+
+    header nav ul ul {
+        position: static;
+        box-shadow: none;
+        background-color: transparent;
+    }
+
+    header nav ul ul li a {
+        padding: 10px 20px;
+        color: #fff;
+        text-decoration: none;
+    }
+
+    header nav ul ul li a:hover {
+        background-color: #ffcc00;
+        color: #0055a5;
+    }
+
+    .nav-active {
+        display: flex !important;
+    }
+}
+
+/* About section styles */
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.about-text {
+    width: 50%;
+    padding: 20px;
+}
+
+.about-text h2 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    font-weight: 700;
+    color: #333;
+}
+
+.about-text p {
+    font-size: 1em;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.about-image {
+    width: 50%;
+    background-image: url('online-class.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text, .about-image {
+        width: 100%;
+    }
+
+    .about-image {
+        height: 300px;
+    }
+}

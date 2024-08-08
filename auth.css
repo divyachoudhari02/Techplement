@@ -1,0 +1,168 @@
+/* General styles for the body */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+/* Style for the header */
+header {
+    background: linear-gradient(90deg, #0066cc, #003366);
+    color: #fff;
+    padding: 10px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8em;
+    font-weight: 700;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    border-radius: 5px;
+}
+
+header nav ul li a:hover {
+    color: #ffcc00;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Authentication section styles */
+.auth-section {
+    padding: 50px 20px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 140px); /* Full height minus header and footer */
+}
+
+.auth-section .container {
+    max-width: 400px;
+    width: 100%;
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.auth-form h2 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    color: #333;
+}
+
+.auth-form label {
+    display: block;
+    margin: 15px 0 5px;
+    font-size: 1em;
+    color: #333;
+}
+
+.auth-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.auth-form input:focus {
+    border-color: #0066cc;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 102, 204, 0.3);
+}
+
+.auth-form .cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #0066cc;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.auth-form .cta-button:hover {
+    background-color: #004d99;
+}
+
+.auth-form p {
+    margin-top: 20px;
+    font-size: 1em;
+    color: #333;
+}
+
+.auth-form p a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.auth-form p a:hover {
+    text-decoration: underline;
+}
+
+/* Footer styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    bottom: 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    header .container {
+        flex-direction: column;
+    }
+
+    header nav ul {
+        flex-direction: column;
+    }
+
+    header nav ul li {
+        margin: 10px 0;
+    }
+}
